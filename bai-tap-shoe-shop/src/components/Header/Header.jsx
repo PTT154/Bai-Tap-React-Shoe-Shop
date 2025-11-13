@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="bg-black py-4 fixed w-full z-10">
       <div className="container mx-auto flex items-center justify-around">
-        <img className="h-10" src="/public/Adidas-Logo.png" alt="adidas-white-logo.png"/>
+        <img className="h-10" src="/public/Adidas-Logo.png" alt="adidas-white-logo.png" />
         <nav>
           <ul className="flex space-x-8 justify-start">
             <li>
@@ -27,10 +27,10 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <button className="text-white text-xl cursor-pointer">
+
+        <button data-modal-target="default-modal" data-modal-toggle="default-modal" className="text-white text-xl cursor-pointer" type="button">
           <i className="fa-solid fa-cart-shopping"></i>
         </button>
-
       </div>
     </header>
   )
