@@ -1,11 +1,15 @@
 import React from 'react'
 import ProductItem from "./ProductItem"
-import Cart from "./Cart"
 
-export default function ProductList({ shoesListProp }) {
+export default function ProductList({ shoesListProp, onGetProductToCartProp }) {
+
+  const onGetProductToCart = (shoe) => {
+    onGetProductToCartProp(shoe);
+  }
+
   const renderListProduct = () => {
     return shoesListProp.map((shoe) =>
-      <ProductItem key={shoe.id} shoeProp={shoe} />
+      <ProductItem key={shoe.id} shoeProp={shoe} onGetProductToCartProp={onGetProductToCart} />
     )
   }
 
@@ -16,7 +20,6 @@ export default function ProductList({ shoesListProp }) {
         {renderListProduct()}
       </div>
 
-      <Cart />
     </div>
   )
 }
